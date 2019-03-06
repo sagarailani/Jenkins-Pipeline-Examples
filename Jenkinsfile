@@ -18,7 +18,7 @@ pipeline {
     	success {
     		echo "Build Successful"
     		mail to: 'sagar.ailani@somaiya.edu',
-    		     subject: "Failed Pipeline: ${currentBuild.fullDisplayName}",
+    		     subject: "Pipeline Build Successful: ${currentBuild.fullDisplayName}",
     		     body: "Something is wrong with ${env.BUILD_URL}"
     	}
     	failure {
